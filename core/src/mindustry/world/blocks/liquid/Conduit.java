@@ -143,9 +143,9 @@ public class Conduit extends LiquidBlock implements Autotiler{
     }
 
     @Override
-    public TextureRegion[] icons(){
-        return new TextureRegion[]{Core.atlas.find("conduit-bottom"), topRegions[0]};
-    }
+public TextureRegion[] icons(){
+    return new TextureRegion[]{Core.atlas.find(name + "-bottom", Core.atlas.find("conduit-bottom")), topRegions[0]};
+}
 
     public class ConduitBuild extends LiquidBuild implements ChainedBuilding{
         public float smoothLiquid;
